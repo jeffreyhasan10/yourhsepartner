@@ -1,58 +1,133 @@
 
 import React from "react";
+import { Phone, Mail, MapPin, ExternalLink } from "lucide-react";
 
 const Footer = () => {
+  const quickLinks = [
+    { name: "Products", href: "#features" },
+    { name: "Industries", href: "#applications" },
+    { name: "Resources", href: "#faq" },
+    { name: "Support", href: "#contact" },
+    { name: "Contact", href: "#contact" }
+  ];
+
+  const legalLinks = [
+    { name: "Privacy Policy", href: "#" },
+    { name: "Terms of Service", href: "#" },
+    { name: "Cookie Policy", href: "#" },
+    { name: "Security", href: "#" }
+  ];
+
   return (
-    <footer className="w-full bg-white py-12" id="contact">
-      <div className="section-container">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white" id="contact">
+      <div className="section-container py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Information */}
-          <div>
-            <h3 className="text-xl font-bold text-pulse-600 mb-4">YourHSEPartner</h3>
-            <p className="text-gray-600 mb-4">
-              YourHSEPartner provides comprehensive EHS management software solutions to help organizations protect workers, ensure compliance, and enhance workplace safety.
+          <div className="lg:col-span-2">
+            <h3 className="text-2xl font-bold mb-4 text-white">YourHSEPartner</h3>
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              YourHSEPartner provides comprehensive EHS management software solutions to help organizations protect workers, ensure compliance, and enhance workplace safety through innovative cloud-based technology.
             </p>
-            <div className="space-y-2">
-              <p className="text-gray-600">
-                <strong>Phone:</strong> 1 877 932 3747
-              </p>
-              <p className="text-gray-600">
-                <strong>Europe:</strong> +44 20 3795 5646
-              </p>
-              <p className="text-gray-600">
-                <strong>Email:</strong> info@yourhsepartner.com
-              </p>
+            
+            {/* Contact Information */}
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 rounded-lg bg-ehs-600 flex items-center justify-center">
+                  <Phone className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <p className="font-medium text-white">Phone Support</p>
+                  <p className="text-gray-300 text-sm">1 877 932 3747</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 rounded-lg bg-ehs-600 flex items-center justify-center">
+                  <MapPin className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <p className="font-medium text-white">Europe Office</p>
+                  <p className="text-gray-300 text-sm">+44 20 3795 5646</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 rounded-lg bg-ehs-600 flex items-center justify-center">
+                  <Mail className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <p className="font-medium text-white">Email Support</p>
+                  <p className="text-gray-300 text-sm">info@yourhsepartner.com</p>
+                </div>
+              </div>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><a href="#features" className="text-gray-600 hover:text-pulse-500 transition-colors">Products</a></li>
-              <li><a href="#applications" className="text-gray-600 hover:text-pulse-500 transition-colors">Industries</a></li>
-              <li><a href="#faq" className="text-gray-600 hover:text-pulse-500 transition-colors">Resources</a></li>
-              <li><a href="#contact" className="text-gray-600 hover:text-pulse-500 transition-colors">Support</a></li>
-              <li><a href="#contact" className="text-gray-600 hover:text-pulse-500 transition-colors">Contact</a></li>
+            <h4 className="text-lg font-semibold mb-6 text-white">Quick Links</h4>
+            <ul className="space-y-3">
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <a 
+                    href={link.href} 
+                    className="text-gray-300 hover:text-ehs-400 transition-colors duration-200 flex items-center group"
+                  >
+                    {link.name}
+                    <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Legal Information */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Legal Information</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-pulse-500 transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-pulse-500 transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-pulse-500 transition-colors">Cookie Policy</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-pulse-500 transition-colors">Security</a></li>
+            <h4 className="text-lg font-semibold mb-6 text-white">Legal Information</h4>
+            <ul className="space-y-3">
+              {legalLinks.map((link, index) => (
+                <li key={index}>
+                  <a 
+                    href={link.href} 
+                    className="text-gray-300 hover:text-ehs-400 transition-colors duration-200 flex items-center group"
+                  >
+                    {link.name}
+                    <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </a>
+                </li>
+              ))}
             </ul>
+            
+            {/* Newsletter Signup */}
+            <div className="mt-8">
+              <h5 className="text-sm font-semibold mb-3 text-white">Stay Updated</h5>
+              <div className="flex space-x-2">
+                <input 
+                  type="email" 
+                  placeholder="Enter your email"
+                  className="flex-1 px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 text-sm focus:outline-none focus:border-ehs-500 transition-colors"
+                />
+                <button className="px-4 py-2 bg-ehs-600 hover:bg-ehs-700 text-white rounded-lg text-sm font-medium transition-colors">
+                  Subscribe
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-        
-        <div className="border-t border-gray-200 pt-8">
-          <p className="text-center text-gray-600 text-sm">
-            © 2024 YourHSEPartner. All rights reserved.
-          </p>
+
+        {/* Bottom Bar */}
+        <div className="mt-12 pt-8 border-t border-gray-700">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p className="text-gray-400 text-sm text-center md:text-left">
+              © 2024 YourHSEPartner. All rights reserved. Empowering workplace safety through innovative EHS management solutions.
+            </p>
+            <div className="flex items-center space-x-6">
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <span className="text-xs text-gray-400">System Status: Operational</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
