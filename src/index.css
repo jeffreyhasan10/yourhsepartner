@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
@@ -26,8 +25,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 24 95% 53%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 142 71% 35%;
+    --primary-foreground: 0 0% 98%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -43,7 +42,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 24 95% 53%;
+    --ring: 142 71% 35%;
 
     --radius: 0.5rem;
 
@@ -67,7 +66,7 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 24 95% 53%;
+    --primary: 142 71% 35%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -120,12 +119,12 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #2A8540;
     border-radius: 10px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #22c55e;
   }
 }
 
@@ -139,7 +138,7 @@
   }
 
   .pulse-chip {
-    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-pulse-100 text-pulse-600 border border-pulse-200;
+    @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-ehs-100 text-ehs-700 border border-ehs-200 shadow-sm;
   }
   
   .section-container {
@@ -155,23 +154,31 @@
   }
 
   .glass-card {
-    @apply bg-white/70 backdrop-blur-sm border border-white/20 rounded-2xl shadow-elegant transition-all duration-300 hover:shadow-elegant-hover;
+    @apply bg-white/90 backdrop-blur-sm border border-ehs-200/20 rounded-2xl shadow-ehs-shadow transition-all duration-300 hover:shadow-elegant-hover;
   }
 
   .feature-card {
-    @apply p-6 rounded-2xl transition-all duration-500 hover:translate-y-[-5px];
+    @apply p-6 rounded-2xl transition-all duration-500 hover:translate-y-[-5px] bg-gradient-to-br from-white to-ehs-50/50 border border-ehs-100;
   }
   
   .button-primary {
-    @apply bg-pulse-500 hover:bg-pulse-600 text-white font-medium py-3 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-[0.98];
+    @apply bg-primary-gradient hover:from-ehs-600 hover:to-ehs-700 text-white font-medium py-3 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-[0.98];
   }
 
   .button-secondary {
-    @apply bg-transparent border border-gray-300 hover:border-pulse-500 text-gray-800 hover:text-pulse-500 font-medium py-3 px-6 rounded-full transition-all duration-300;
+    @apply bg-transparent border border-ehs-300 hover:border-ehs-500 text-gray-800 hover:text-ehs-600 font-medium py-3 px-6 rounded-full transition-all duration-300;
   }
   
   .nav-link {
-    @apply relative text-gray-800 hover:text-pulse-500 py-2 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-pulse-500 after:transition-all hover:after:w-full;
+    @apply relative text-gray-800 hover:text-ehs-600 py-2 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-ehs-500 after:transition-all hover:after:w-full;
+  }
+
+  .stats-card {
+    @apply bg-gradient-to-br from-ehs-50 to-white p-6 rounded-xl border border-ehs-200 shadow-sm;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-ehs-600 to-ehs-500 bg-clip-text text-transparent;
   }
 }
 

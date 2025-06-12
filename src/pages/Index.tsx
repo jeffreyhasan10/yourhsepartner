@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import EHSStatistics from "@/components/EHSStatistics";
 import EHSCoreAreas from "@/components/EHSCoreAreas";
 import EHSApplications from "@/components/EHSApplications";
 import KeyFeatures from "@/components/KeyFeatures";
@@ -62,6 +63,7 @@ const Index = () => {
       <Navbar />
       <main className="space-y-4 sm:space-y-8">
         <Hero />
+        <EHSStatistics />
         <EHSCoreAreas />
         <EHSApplications />
         <KeyFeatures />

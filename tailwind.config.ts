@@ -63,19 +63,46 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
+				// Enhanced green color palette
+				ehs: {
+					"50": "#f0fdf4",
+					"100": "#dcfce7",
+					"200": "#bbf7d0",
+					"300": "#86efac",
+					"400": "#4ade80",
+					"500": "#22c55e",
+					"600": "#16a34a",
+					"700": "#15803d",
+					"800": "#166534",
+					"900": "#14532d",
+					"950": "#052e16",
+				},
+				primary: {
+					"50": "#f0fdf4",
+					"100": "#dcfce7",
+					"200": "#bbf7d0",
+					"300": "#86efac",
+					"400": "#4ade80",
+					"500": "#2A8540",
+					"600": "#16a34a",
+					"700": "#15803d",
+					"800": "#166534",
+					"900": "#14532d",
+					"950": "#052e16",
+				},
 				// Custom colors for Pulse Robot
 				pulse: {
-					"50": "#fff7ed",
-					"100": "#ffedd5",
-					"200": "#fed7aa",
-					"300": "#fdba74",
-					"400": "#fb923c",
-					"500": "#f97316", // Primary orange
-					"600": "#ea580c",
-					"700": "#c2410c",
-					"800": "#9a3412",
-					"900": "#7c2d12",
-					"950": "#431407",
+					"50": "#f0fdf4",
+					"100": "#dcfce7",
+					"200": "#bbf7d0",
+					"300": "#86efac",
+					"400": "#4ade80",
+					"500": "#2A8540",
+					"600": "#16a34a",
+					"700": "#15803d",
+					"800": "#166534",
+					"900": "#14532d",
+					"950": "#052e16",
 				},
 				dark: {
 					"900": "#121212", // Almost black
@@ -137,9 +164,11 @@ export default {
 				'float': 'float 6s ease-in-out infinite'
 			},
 			backgroundImage: {
-				'hero-gradient': 'linear-gradient(90deg, hsla(24, 100%, 83%, 1) 0%, hsla(341, 91%, 68%, 1) 100%)',
-				'hero-gradient-2': 'linear-gradient(90deg, hsla(39, 100%, 77%, 1) 0%, hsla(22, 90%, 57%, 1) 100%)',
-				'pulse-gradient': 'linear-gradient(180deg, rgba(249,115,22,0.8) 0%, rgba(249,115,22,0) 100%)',
+				'hero-gradient': 'linear-gradient(135deg, #2A8540 0%, #22c55e 50%, #16a34a 100%)',
+				'hero-gradient-2': 'linear-gradient(135deg, #22c55e 0%, #2A8540 50%, #15803d 100%)',
+				'ehs-gradient': 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%)',
+				'primary-gradient': 'linear-gradient(135deg, #2A8540 0%, #22c55e 100%)',
+				'pulse-gradient': 'linear-gradient(180deg, rgba(42,133,64,0.8) 0%, rgba(42,133,64,0) 100%)',
 			},
 			fontFamily: {
 				'sans': ['Inter', 'sans-serif'],
@@ -148,8 +177,9 @@ export default {
 				'playfair': ['"Playfair Display"', 'serif'],
 			},
 			boxShadow: {
-				'elegant': '0 4px 20px rgba(0, 0, 0, 0.08)',
-				'elegant-hover': '0 8px 30px rgba(0, 0, 0, 0.12)',
+				'elegant': '0 4px 20px rgba(42, 133, 64, 0.15)',
+				'elegant-hover': '0 8px 30px rgba(42, 133, 64, 0.25)',
+				'ehs-shadow': '0 10px 40px rgba(42, 133, 64, 0.1)',
 			}
 		}
 	},
