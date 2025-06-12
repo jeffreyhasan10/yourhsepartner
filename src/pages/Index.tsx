@@ -59,9 +59,9 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden w-full max-w-full">
       <Navbar />
-      <main className="space-y-4 sm:space-y-8">
+      <main className="w-full overflow-x-hidden">
         <Hero />
         <EHSStatistics />
         <EHSCoreAreas />
